@@ -14,11 +14,11 @@ Location = 'Istanbul,Turkey'
 BaseURL = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'
 
 unit = 'metric'
-location = Location
-StartDate = '2025-04-17'
-EndDate = '2025-04-18'
+location ='Istanbul,Turkey'
+StartDate = '2025-04-19'
+EndDate = '2025-04-20'
 ContentType = 'json'
-Include = 'daily'
+Include = 'hours'
 
 ApiQuery = BaseURL + location
 
@@ -71,3 +71,10 @@ if weather_data:
 
 
         
+def crate_json_folder():
+
+    with open('folder.json' , 'w') as f:
+        json.dump(weather_data , f , indent=4)
+
+
+crate_json_folder()
