@@ -44,10 +44,9 @@ pip install -r requirements.txt
 
 # Run the script
 python main.py
+```
 
-'''
-
-How It Works
+## How It Works
 
 Weather Data Request: When you run the script, it will first check if the weather data for the specified location and date range is already cached in Redis.
 API Request: If the data is not found in the cache, the script makes an API request to the Visual Crossing Weather API to fetch the weather data.
