@@ -7,7 +7,7 @@ This project connects to the Visual Crossing Weather API to fetch weather data f
 - **main.py**: The main script that handles fetching weather data from the Visual Crossing Weather API.
 - **cache.py**: A script responsible for managing the caching of the weather data using Redis.
 - **requirements.txt**: Contains the necessary Python packages for this project.
-- **.gitignore**: Specifies files and directories to be ignored by Git (e.g., sensitive information, virtual environments).
+
 
 ## Features
 
@@ -24,8 +24,8 @@ This project connects to the Visual Crossing Weather API to fetch weather data f
 
 ### Steps
 ```bash
-git clone <your-git-repository-url>
-cd <your-repository-folder>
+git clone <git-repository-url>
+cd <repository-folder>
 
 # Create and activate a virtual environment (if not already done)
 python -m venv venv
@@ -44,3 +44,12 @@ pip install -r requirements.txt
 
 # Run the script
 python main.py
+
+
+
+How It Works
+
+Weather Data Request: When you run the script, it will first check if the weather data for the specified location and date range is already cached in Redis.
+API Request: If the data is not found in the cache, the script makes an API request to the Visual Crossing Weather API to fetch the weather data.
+Caching: The retrieved data is then cached in Redis for 1 hour, ensuring that the next request is faster.
+Output: The weather data is printed in a readable format, showing temperatures, wind speeds, and other relevant data.
